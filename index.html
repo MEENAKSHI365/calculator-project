@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Cool Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <div class="calculator-container">
+        <h1 class="title">Awesome Calculator</h1>
+        
+        <div class="display" id="display">0</div>
+
+        <div class="buttons">
+            <button class="btn" onclick="clearDisplay()">AC</button>
+            <button class="btn" onclick="append('%')">%</button>
+            <button class="btn" onclick="square()">x²</button>
+            <button class="btn operator" onclick="append('/')">/</button>
+
+            <button class="btn" onclick="append('7')">7</button>
+            <button class="btn" onclick="append('8')">8</button>
+            <button class="btn" onclick="append('9')">9</button>
+            <button class="btn operator" onclick="append('*')">*</button>
+
+            <button class="btn" onclick="append('4')">4</button>
+            <button class="btn" onclick="append('5')">5</button>
+            <button class="btn" onclick="append('6')">6</button>
+            <button class="btn operator" onclick="append('-')">-</button>
+
+            <button class="btn" onclick="append('1')">1</button>
+            <button class="btn" onclick="append('2')">2</button>
+            <button class="btn" onclick="append('3')">3</button>
+            <button class="btn operator" onclick="append('+')">+</button>
+
+            <button class="btn" onclick="append('0')">0</button>
+            <button class="btn" onclick="append('.')">.</button>
+            <button class="btn equal" onclick="calculate()">=</button>
+        </div>
+
+        <div class="history" id="history">
+            <h2>History</h2>
+            <ul id="history-list"></ul>
+        </div>
+
+        <div class="settings">
+            <button onclick="toggleTheme()">Toggle Dark/Light</button>
+            <select id="themeSwitcher" onchange="changeTheme(this.value)">
+                <option value="default">Default</option>
+                <option value="space">Space</option>
+                <option value="candy">Candy</option>
+                <option value="neon">Neon</option>
+            </select>
+        </div>
+    </div>
+
+    <audio id="click-sound" src="https://www.fesliyanstudios.com/play-mp3/4385"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
